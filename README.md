@@ -1,8 +1,8 @@
 <img src="logo.png" width="200" height="200" align=right />
 
-# Code for IRENE
+# A transformer-based representation-learning model with unified processing of multimodal input for clinical diagnostics. Nat. Biomed. Eng (2023)
 
-This repository provides the code for IRENE. Based on the code, you can easily train your own IRENE by configuring your own dataset and modifying the training details (such as optimizer, learning rate, etc).
+This repository provides the code for IRENE, which was published on Nature BME (2023). Based on the code, you can easily train your own IRENE by configuring your own dataset and modifying the training details (such as optimizer, learning rate, etc).
 
 ## Overview
 As illustrated by the right figure [1], IRENE a new Transformer-based multi-modal medical diagnosis and prognosis paradigm. Different from the current deep learning powered diagnosis systems that mostly lean upon a non-unified way to fuse information from multiple sources, IRENE has the ability to learn holistic multi-modal representations progressively by treating input data in different modalities in a uniform way as sequences of tokens, simultaneously incorporating entire medical knowledge graph information.
@@ -42,6 +42,19 @@ Note that `xxx.pkl` is a dictionary that stores the clinical textual data in the
 >>> subset[key]['bics'] # the demographics information (age and sex)
 >>> subset[key]['bts'] #  the laboratory test results
 >>> subset[key]['label'] # the disease labels
+```
+
+# If you use this code for your research, please consider citing:
+
+```bash
+@article{zhou2023irene,
+  title={A transformer-based representation-learning model with unified processing of multimodal input for clinical diagnostics},
+  author={Zhou, Hong-Yu and Yu, Yizhou and Wang, Chengdi and Zhang, Shu and Gao, Yuanxu and Pan, Jia and Shao, Jun and Lu, Guangming and Zhang, Kang and Li, Weimin},
+  journal={Nature Biomedical Engineering},
+  doi={10.1038/s41551-023-01045-x}
+  year={2023},
+  publisher={Nature Publishing Group UK London}
+}
 ```
 
 [1]: This figure is generated using Stable Diffusion, where the prompt is ``A Transformer that exploits multi-modal clinical information for medical diagnosis.''
